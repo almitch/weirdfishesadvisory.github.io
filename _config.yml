@@ -2,8 +2,8 @@
 title: Weird Fishes Advisory
 tagline: Connecting data, people, and purpose for a better planet.
 description: Technology and data analytics consultancy specializing in conservation and environmental impact.
-url: "https://almitch.github.io"
-baseurl: "/weirdfishesadvisory.github.io"
+url: "https://weirdfishes.fish"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
