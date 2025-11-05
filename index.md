@@ -126,7 +126,9 @@ title: Home
 <section class="clients-section">
   <h2>My Clients</h2>
   <div class="client-logos">
-    <img src="{{ '/assets/web/ocean-wise-logo.png' | relative_url }}" alt="Ocean Wise" class="client-logo">
+    <a href="https://ocean.org/whales/wras/the-ocean-wise-whale-report-app/" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/web/ocean-wise-logo.png' | relative_url }}" alt="Ocean Wise" class="client-logo">
+    </a>
     <!-- Add more client logos here -->
   </div>
 </section>
