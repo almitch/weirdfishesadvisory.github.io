@@ -1,0 +1,385 @@
+/* ==========================================
+   COLOR PALETTE & THEME VARIABLES
+   ========================================== */
+
+:root {
+  /* Light mode colors */
+  --color-navy: #142e3d;
+  --color-orange: #d95d1e;
+  --color-pale-blue: #f2f5f0;
+  --color-grey: #b3bab8;
+  
+  /* Light mode theme */
+  --bg-primary: var(--color-pale-blue);
+  --bg-secondary: #ffffff;
+  --text-primary: var(--color-navy);
+  --text-secondary: #5a5a5a;
+  --accent: var(--color-orange);
+  --border: var(--color-grey);
+  --nav-bg: rgba(242, 245, 240, 0.9);
+}
+
+[data-theme="dark"] {
+  /* Dark mode theme */
+  --bg-primary: var(--color-navy);
+  --bg-secondary: #0d1f2a;
+  --text-primary: var(--color-pale-blue);
+  --text-secondary: var(--color-grey);
+  --accent: var(--color-orange);
+  --border: #2a4a5a;
+  --nav-bg: rgba(20, 46, 61, 0.9);
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ==========================================
+   LAYOUT
+   ========================================== */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+  padding: 4rem 0;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+
+.site-header {
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.site-title a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.site-title a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.theme-toggle .material-icons {
+  font-size: 28px;
+  transition: color 0.2s ease;
+}
+
+/* Light mode: show moon in orange */
+[data-theme="light"] .theme-toggle .moon {
+  display: flex;
+  color: var(--color-orange);
+}
+
+[data-theme="light"] .theme-toggle .sun {
+  display: none;
+}
+
+/* Dark mode: show sun in navy */
+[data-theme="dark"] .theme-toggle .sun {
+  display: flex;
+  color: var(--color-navy);
+}
+
+[data-theme="dark"] .theme-toggle .moon {
+  display: none;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  transition: background-color 0.3s ease;
+}
+
+.site-footer p {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ==========================================
+   PAGE CONTENT
+   ========================================== */
+
+.page-content {
+  max-width: 800px;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.page-header h1 {
+  margin-bottom: 0;
+}
+
+.page-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   HOME PAGE SPECIFIC
+   ========================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+  gap: 3rem;
+}
+
+.hero-logo {
+  font-size: 8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.hero-content {
+  text-align: right;
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.intro {
+  max-width: 100%;
+  margin: 3rem 0 0 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* ==========================================
+   CONTACT PAGE
+   ========================================== */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item strong {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--accent);
+  min-width: 100px;
+}
+
+.contact-item a {
+  color: var(--text-primary);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .site-nav {
+    gap: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-logo {
+    font-size: 5rem;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

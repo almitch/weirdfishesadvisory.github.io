@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="site-logo">
+        <a href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/web/logo-rect-light.svg' | relative_url }}" alt="{{ site.title }}" class="logo-light">
+          <img src="{{ '/assets/web/logo-rect-dark.svg' | relative_url }}" alt="{{ site.title }}" class="logo-dark">
+        </a>
+      </div>
+      
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+        <a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
+        <a href="{{ '/contact' | relative_url }}" {% if page.url == '/contact/' %}class="active"{% endif %}>Contact</a>
+        
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>

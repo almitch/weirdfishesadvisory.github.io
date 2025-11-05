@@ -1,0 +1,32 @@
+# Site settings
+title: Weird Fishes Advisory
+tagline: Connecting data, people, and purpose for a better planet.
+description: Technology and data analytics consultancy specializing in conservation and environmental impact.
+url: "https://weirdfishesadvisory.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .obsidian/
+
+# Collections (for future blog if needed)
+# collections:
+#   posts:
+#     output: true
+#     permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
