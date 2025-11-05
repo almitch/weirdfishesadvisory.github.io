@@ -79,7 +79,6 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-top: 2rem;
-  margin-bottom: 1.25rem; 
 }
 
 h3 {
@@ -237,41 +236,35 @@ main {
   transition: all 0.2s ease;
   min-width: 44px;
   min-height: 44px;
-  font-size: 20px;
-  position: relative;
 }
 
-.theme-toggle i {
-  transition: opacity 0.2s ease;
-  position: absolute;
+.theme-toggle .material-icons {
+  font-size: 28px;
+  transition: color 0.2s ease;
+}
+
+/* Light mode: show moon in orange */
+[data-theme="light"] .theme-toggle .moon {
+  display: flex;
+  color: var(--color-orange);
+}
+
+[data-theme="light"] .theme-toggle .sun {
+  display: none;
+}
+
+/* Dark mode: show sun in navy */
+[data-theme="dark"] .theme-toggle .sun {
+  display: flex;
+  color: var(--color-navy);
+}
+
+[data-theme="dark"] .theme-toggle .moon {
+  display: none;
 }
 
 .theme-toggle:hover {
   transform: scale(1.1);
-}
-
-/* Light mode: show moon icon in dark blue */
-[data-theme="light"] .theme-toggle .fa-moon {
-  display: block;
-  opacity: 1;
-  color: var(--color-navy);
-}
-
-[data-theme="light"] .theme-toggle .fa-sun {
-  display: none;
-  opacity: 0;
-}
-
-/* Dark mode: show sun icon in pale blue */
-[data-theme="dark"] .theme-toggle .fa-sun {
-  display: block;
-  opacity: 1;
-  color: var(--color-pale-blue);
-}
-
-[data-theme="dark"] .theme-toggle .fa-moon {
-  display: none;
-  opacity: 0;
 }
 
 /* ==========================================
@@ -287,7 +280,7 @@ main {
 }
 
 .footer-copyright {
-  text-align: left;
+  text-align: center;
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin: 0;
@@ -468,7 +461,7 @@ main {
   padding: 4rem;
   border-radius: 12px;
   border: 1px solid var(--border);
-  max-width: 1400px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -503,8 +496,7 @@ main {
 
 .services-section h2 {
   font-size: 2.25rem;
-  text-align: left; 
-  padding: 0rem 3rem;
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -550,60 +542,64 @@ main {
 }
 
 /* Clients Section */
-/* Clients Section */
 .clients-section {
   max-width: 1100px;
   margin: 0 auto 5rem auto;
-  padding: 0rem 0rem;
-  text-align: left;  /* Changed from center */
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .clients-section h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin-bottom: 3rem;
   color: var(--text-primary);
-  text-align: left;  /* Added this */
 }
 
 .client-logos {
   display: flex;
-  justify-content: flex-start;  /* Changed from center */
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
   padding: 2rem 0;
 }
 
 .client-logo {
-  height: 200px;  /* Increased from 40px */
+  height: 60px;
   width: auto;
-  max-width: 250px;  /* Increased from 150px */
+  max-width: 180px;
   object-fit: contain;
   opacity: 0.8;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Custom bullet points with orange tilde */
+.client-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Custom bullet points using fish icons */
 ul {
   list-style: none;
   padding-left: 0;
 }
 
 ul li {
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   position: relative;
   margin-bottom: 0.75rem;
 }
 
 ul li::before {
-  content: '~';
+  content: '';
   position: absolute;
   left: 0;
-  top: 0;
-  color: var(--accent);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.5;
+  top: 0.35rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Dark mode: use light fish icon */
