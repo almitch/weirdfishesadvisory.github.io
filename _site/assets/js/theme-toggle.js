@@ -3,7 +3,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
 // Get current theme
-let currentTheme = localStorage.getItem('theme') || 'light';
+let currentTheme = localStorage.getItem('theme') || 'dark';
 
 // Set initial theme
 html.setAttribute('data-theme', currentTheme);
