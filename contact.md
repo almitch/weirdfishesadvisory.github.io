@@ -8,12 +8,12 @@ Let's discuss how we can work together to create better outcomes for conservatio
 <div class="contact-info">
   <div class="contact-item">
     <strong>Email:</strong>
-    <a href="mailto:your-email@example.com">your-email@example.com</a>
+    <a href="mailto:alex.mitchell@weirdfishes.fish">alex.mitchell@weirdfishes.fish</a>
   </div>
   
   <div class="contact-item">
     <strong>LinkedIn:</strong>
-    <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    <a href="https://www.linkedin.com/in/a-t-mitchell/" target="_blank" rel="noopener">Connect on LinkedIn</a>
   </div>
 </div>
 
