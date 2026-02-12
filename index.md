@@ -8,9 +8,10 @@ title: Home
 </div>
 
 <section class="hero-section">
-  <h1>Conservation strategy. Built, measured, delivered.</h1>
-  <p class="subheadline">I help conservation organizations turn ambitious plans into functioning reality. From decision-support tools to impact analysis to program strategy—I bridge the gap between what you want to do and proving it actually works.</p>
-  <a href="{{ '/contact' | relative_url }}" class="cta-button">Let's talk about your challenge</a>
+  <h1>Data - Decisions - Strategy - Communication </h1>
+  <p class="subheadline">I help organizations turn ambitious plans into functioning reality. From decision-support tools, to strategy, to communicating this to decision makers. I bridge the gap between 
+data, decisions, strategy, and communications. </p>
+  <a href="{{ '/contact' | relative_url }}" class="cta-button">What is your challenge? </a>
 </section>
 
 <section class="content-section two-column-section">
