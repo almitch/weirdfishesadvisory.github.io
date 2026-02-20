@@ -22,8 +22,8 @@
   
   <!-- Theme detection -->
   <script>
-    // Check for saved theme preference or default to dark mode
-    const theme = 'dark';
+    // Check for saved theme preference or default to light mode
+    const theme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', theme);
   </script>
 </head>
