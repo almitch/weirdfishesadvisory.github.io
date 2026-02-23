@@ -14,8 +14,9 @@
         <a href="{{ '/contact' | relative_url }}" {% if page.url == '/contact/' %}class="active"{% endif %}>Contact</a>
         
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun toggle-sun"></i>
+          <span class="toggle-thumb"></span>
+          <i class="fas fa-moon toggle-moon"></i>
         </button>
       </nav>
     </div>
