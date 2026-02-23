@@ -15,9 +15,7 @@ title: About
       <p>Before setting up the advisory, I spent seven years doing exactly this work at International NGOs and Government. Through my experience I saw time and time again organisations struggling to use their data effectively. I set up Weird Fishes Advisory with the aim to help projects utilising environmental data for good better understand, use, and communicate data for better outcomes for nature.</p>
     </div>
     <div class="about-photo">
-      <div class="photo-placeholder">
-        <span>Photo coming soon</span>
-      </div>
+      <img src="{{ '/assets/web/alex-mitchell.jpg' | relative_url }}" alt="Alex Mitchell">
     </div>
   </div>
 </section>
