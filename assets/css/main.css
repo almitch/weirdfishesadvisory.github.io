@@ -58,6 +58,41 @@ body {
   width: 100%;
 }
 
+/* Gradient blobs — persistent fixed background visible on all pages when scrolling */
+body::before {
+  content: '';
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(217, 93, 30, 0.2) 0%, transparent 65%);
+  top: -120px;
+  right: 5%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(20, 46, 61, 0.08) 0%, transparent 65%);
+  top: 60px;
+  left: 5%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-theme="dark"] body::before {
+  background: radial-gradient(ellipse at center, rgba(217, 93, 30, 0.35) 0%, transparent 65%);
+}
+
+[data-theme="dark"] body::after {
+  background: radial-gradient(ellipse at center, rgba(242, 245, 240, 0.12) 0%, transparent 65%);
+}
+
 /* ==========================================
    TYPOGRAPHY
    ========================================== */
@@ -125,6 +160,8 @@ main {
   padding: 4rem 0;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 /* ==========================================
@@ -284,9 +321,23 @@ main {
    FOOTER
    ========================================== */
 
+/* Footer banner — full-width, sits directly above the footer */
+.footer-banner {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-banner img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
 .site-footer {
   background: var(--bg-secondary);
-  border-top: 1px solid var(--border);
+  border-top: none;
   padding: 2rem 0;
   margin-top: 6rem;
   transition: background-color 0.3s ease;
@@ -908,6 +959,88 @@ ul li::before {
   border-top: 1px solid var(--border);
 }
 
+/* ==========================================
+   OFFSET SECTION — reusable 1fr/2fr layout
+   matches index page rhythm on about/contact
+   ========================================== */
+
+.offset-section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+
+.offset-content {
+  grid-column: 2;
+}
+
+.offset-content h2 {
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.offset-content h3 {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.offset-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+/* About page — photo fills left "empty" column below the hero */
+.about-photo-section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.about-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-photo-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .offset-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .offset-content {
+    grid-column: 1;
+  }
+
+  .about-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-photo img {
+    max-width: 240px;
+  }
+}
+
 /* About page — intro with photo */
 .about-intro-section {
   max-width: 1150px;
@@ -999,5 +1132,247 @@ ul li::before {
 
   .about-intro-text h1 {
     font-size: 2rem;
+  }
+}
+
+/* ==========================================
+   HOME PAGE — NEW LAYOUT
+   ========================================== */
+
+/* Banner size variants */
+.hero-banner-slim {
+  max-height: 110px;
+}
+
+.hero-banner-tall {
+  max-height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.hero-banner-tall img {
+  max-height: 380px;
+  object-position: center;
+}
+
+/* Full-width hero */
+.home-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 70px 2rem 70px;
+}
+
+.home-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.home-hero-content {
+  grid-column: 2;
+}
+
+.home-hero h1 {
+  font-size: 4rem;
+  line-height: 1.08;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 0 2.5rem;
+}
+
+/* About page hero overrides */
+.about-hero h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+/* Photo column in the about page hero row */
+.about-hero-photo {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.about-hero-photo img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  display: block;
+}
+
+/* Inline arrow text link */
+.cta-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--text-primary);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Services list — replaces problem cards */
+.services-list-section {
+  max-width: 1150px;
+  margin: 0 auto 4rem auto;
+  padding: 0;
+}
+
+.services-list-section > h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.service-number {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.service-row-title h3 {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.service-row-body p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Not a typical consultancy section */
+.not-typical-section {
+  max-width: 1150px;
+  margin: 0 auto 2rem auto;
+  padding: 5rem 0 4rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.not-typical-inner {
+  grid-column: 2;
+}
+
+.not-typical-inner h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.not-typical-inner p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .home-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .home-hero-content {
+    grid-column: 1;
+  }
+
+  .about-hero-photo {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-hero-photo img {
+    max-width: 140px;
+  }
+
+  .home-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 2rem 0;
+  }
+
+  .not-typical-section {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 3rem 0 2rem;
+  }
+
+  .not-typical-inner {
+    grid-column: 1;
+  }
+
+  .not-typical-inner h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero-banner-slim {
+    max-height: 80px;
+  }
+
+  .hero-banner-tall img {
+    max-height: 220px;
   }
 }
