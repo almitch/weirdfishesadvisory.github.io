@@ -20,10 +20,11 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   
-  <!-- Theme detection -->
+  <!-- Theme detection — runs before paint to avoid flash -->
   <script>
-    // Check for saved theme preference or default to light mode
-    const theme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme);
   </script>
 </head>
