@@ -78,5 +78,5 @@ title: Home
 <section class="cta-section">
   <h2>Do you want to create more impact for nature?</h2>
   <p>Whether it's driving decisions, demonstrating impact to funders, or scaling a programme's reach — let's figure out what's stuck and work to fix it.</p>
-  <a href="https://calendar.app.google/SmMTwwXCek6Lr8o4A" target="_blank" rel="noopener" class="cta-button">Book a coffee with me</a>
+  <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener" class="cta-button">Book a coffee with me</a>
 </section>

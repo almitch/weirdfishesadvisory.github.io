@@ -50,7 +50,7 @@ title: About
     <p>I've been invited to speak at international conferences and events such as the European Cetacean Society, NOAA policy workshops, OCEANS conference, and Greentech conferences — presenting on topics from marine data integration to environmental programme scaling.</p>
 
     <div class="about-cta">
-      <p>If you have environmental data that should be doing more — whether that's driving decisions, demonstrating impact to funders, or scaling a programme's reach — <a href="https://calendar.app.google/SmMTwwXCek6Lr8o4A" target="_blank" rel="noopener">book a coffee with me</a>.</p>
+      <p>If you have environmental data that should be doing more — whether that's driving decisions, demonstrating impact to funders, or scaling a programme's reach — <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener">book a coffee with me</a>.</p>
     </div>
   </div>
 </section>

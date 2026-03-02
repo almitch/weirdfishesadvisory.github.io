@@ -17,7 +17,7 @@ title: Contact
     <p>I work with NGOs, governments, and the private sector on both short-term projects (1–3 months) and longer-term strategic partnerships (6–12 months), depending on what your organisation needs.</p>
 
     <div class="contact-cta">
-      <a href="https://calendar.app.google/SmMTwwXCek6Lr8o4A" target="_blank" rel="noopener" class="cta-button">Book a coffee with me</a>
+      <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener" class="cta-button">Book a coffee with me</a>
     </div>
 
     <div class="contact-info">
