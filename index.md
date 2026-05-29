@@ -3,70 +3,207 @@ layout: default
 title: Home
 ---
 
-<section class="home-hero">
-  <div class="home-hero-inner">
-    <div class="home-hero-content">
-      <h1>Turning nature data into impact for nature.</h1>
-      <p class="hero-sub">Weird Fishes Advisory promotes leveraging data, systems, and strategy to create a world where nature impact is supported by evidence based decision making. Making a change can be difficult, let's find a different perspective to make a positive impact.</p>
-      <a href="{{ '/contact' | relative_url }}" class="cta-link">Let's talk about your challenge →</a>
+<section class="site-hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Environmental Advisory</span>
+      <h1>Turning nature data into <em>impact</em> for nature.</h1>
+      <p class="hero-sub">We help environmental organisations - NGOs, government programmes, conservation startups - use their data to drive decisions, demonstrate impact, and scale what works.</p>
+      <div class="hero-ctas">
+        <a href="{{ '/services' | relative_url }}" class="cta-button">Our services</a>
+        <a href="{{ '/contact' | relative_url }}" class="cta-link">Get in touch →</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="hero-dashboard" viewBox="0 0 580 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <defs>
+          <clipPath id="panel-clip">
+            <rect width="580" height="380" rx="14"/>
+          </clipPath>
+        </defs>
+
+        <!-- Panel base -->
+        <rect width="580" height="380" rx="14" fill="#091824"/>
+
+        <g clip-path="url(#panel-clip)">
+          <!-- Title bar -->
+          <rect width="580" height="44" fill="#0d2233"/>
+          <circle cx="18" cy="22" r="5" fill="rgba(255,255,255,0.11)"/>
+          <circle cx="34" cy="22" r="5" fill="rgba(255,255,255,0.11)"/>
+          <circle cx="50" cy="22" r="5" fill="rgba(255,255,255,0.11)"/>
+          <text x="290" y="28" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="10" font-family="sans-serif" letter-spacing="0.07em">NATURE IMPACT DASHBOARD</text>
+
+          <!-- KPI Card 1 -->
+          <rect x="12" y="52" width="174" height="68" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="24" y="72" fill="rgba(255,255,255,0.38)" font-size="8.5" font-family="sans-serif" letter-spacing="0.06em">SITES PROTECTED</text>
+          <text x="24" y="104" fill="white" font-size="28" font-weight="700" font-family="sans-serif">23</text>
+          <text x="72" y="104" fill="#4ade80" font-size="10" font-family="sans-serif">↑ +4 this yr</text>
+
+          <!-- KPI Card 2 -->
+          <rect x="194" y="52" width="174" height="68" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="206" y="72" fill="rgba(255,255,255,0.38)" font-size="8.5" font-family="sans-serif" letter-spacing="0.06em">DATA POINTS</text>
+          <text x="206" y="104" fill="white" font-size="28" font-weight="700" font-family="sans-serif">1.2M</text>
+          <text x="268" y="104" fill="#4ade80" font-size="10" font-family="sans-serif">↑ 38%</text>
+
+          <!-- KPI Card 3 -->
+          <rect x="376" y="52" width="192" height="68" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="388" y="72" fill="rgba(255,255,255,0.38)" font-size="8.5" font-family="sans-serif" letter-spacing="0.06em">SPECIES MONITORED</text>
+          <text x="388" y="104" fill="white" font-size="28" font-weight="700" font-family="sans-serif">847</text>
+          <text x="448" y="104" fill="rgba(255,255,255,0.32)" font-size="9" font-family="sans-serif">marine + land</text>
+
+          <!-- Main chart panel -->
+          <rect x="12" y="132" width="380" height="196" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="24" y="152" fill="rgba(255,255,255,0.38)" font-size="8.5" font-family="sans-serif" letter-spacing="0.06em">IMPACT SCORE OVER TIME</text>
+
+          <!-- Grid lines -->
+          <line x1="24" y1="170" x2="380" y2="170" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+          <line x1="24" y1="196" x2="380" y2="196" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+          <line x1="24" y1="222" x2="380" y2="222" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+          <line x1="24" y1="248" x2="380" y2="248" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+          <line x1="24" y1="274" x2="380" y2="274" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+          <line x1="24" y1="312" x2="380" y2="312" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+          <!-- Area fill -->
+          <path d="M24,306 L72,292 L130,298 L186,270 L242,250 L298,226 L346,204 L380,178 L380,312 L24,312 Z" fill="rgba(217,93,30,0.13)"/>
+
+          <!-- Line chart -->
+          <path d="M24,306 L72,292 L130,298 L186,270 L242,250 L298,226 L346,204 L380,178" stroke="#d95d1e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+          <!-- Data dots -->
+          <circle cx="24"  cy="306" r="3.5" fill="#d95d1e"/>
+          <circle cx="130" cy="298" r="3.5" fill="#d95d1e"/>
+          <circle cx="242" cy="250" r="3.5" fill="#d95d1e"/>
+          <circle cx="346" cy="204" r="3.5" fill="#d95d1e"/>
+          <!-- Active point with pulse ring -->
+          <circle cx="380" cy="178" r="7"   fill="rgba(217,93,30,0.22)"/>
+          <circle cx="380" cy="178" r="4"   fill="#d95d1e"/>
+
+          <!-- Tooltip -->
+          <rect x="336" y="158" width="80" height="22" rx="4" fill="#d95d1e"/>
+          <text x="376" y="173" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif" font-weight="600">Score: 84.2</text>
+          <polygon points="376,180 371,188 381,188" fill="#d95d1e"/>
+
+          <!-- X axis labels -->
+          <text x="24"  y="325" fill="rgba(255,255,255,0.26)" font-size="8" font-family="sans-serif">Jan</text>
+          <text x="130" y="325" fill="rgba(255,255,255,0.26)" font-size="8" font-family="sans-serif">Mar</text>
+          <text x="240" y="325" fill="rgba(255,255,255,0.26)" font-size="8" font-family="sans-serif">Jun</text>
+          <text x="344" y="325" fill="rgba(255,255,255,0.26)" font-size="8" font-family="sans-serif">Sep</text>
+
+          <!-- Subtle fish silhouettes -->
+          <g fill="white" opacity="0.045">
+            <ellipse cx="102" cy="296" rx="14" ry="5.5"/>
+            <polygon points="88,296 81,290 81,302"/>
+            <ellipse cx="210" cy="268" rx="11" ry="4.5"/>
+            <polygon points="199,268 193,263 193,273"/>
+            <ellipse cx="318" cy="248" rx="16" ry="6"/>
+            <polygon points="302,248 295,242 295,254"/>
+          </g>
+
+          <!-- Right panel: vertical bars by ecosystem -->
+          <rect x="404" y="132" width="164" height="196" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="416" y="152" fill="rgba(255,255,255,0.38)" font-size="8.5" font-family="sans-serif" letter-spacing="0.06em">BY ECOSYSTEM</text>
+
+          <!-- Baseline -->
+          <line x1="412" y1="312" x2="562" y2="312" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+          <!-- Marine (orange) -->
+          <rect x="416" y="186" width="26" height="126" rx="3" fill="rgba(217,93,30,0.55)"/>
+          <rect x="416" y="186" width="26" height="8"   rx="3" fill="rgba(217,93,30,0.9)"/>
+          <text x="429" y="325" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="7.5" font-family="sans-serif">Marine</text>
+
+          <!-- Terrestrial (green) -->
+          <rect x="452" y="234" width="26" height="78"  rx="3" fill="rgba(74,222,128,0.5)"/>
+          <rect x="452" y="234" width="26" height="8"   rx="3" fill="rgba(74,222,128,0.85)"/>
+          <text x="465" y="325" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="7.5" font-family="sans-serif">Land</text>
+
+          <!-- Freshwater (blue) -->
+          <rect x="488" y="214" width="26" height="98"  rx="3" fill="rgba(96,165,250,0.5)"/>
+          <rect x="488" y="214" width="26" height="8"   rx="3" fill="rgba(96,165,250,0.85)"/>
+          <text x="501" y="325" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="7.5" font-family="sans-serif">Fresh</text>
+
+          <!-- Coastal (purple) -->
+          <rect x="524" y="254" width="26" height="58"  rx="3" fill="rgba(167,139,250,0.5)"/>
+          <rect x="524" y="254" width="26" height="8"   rx="3" fill="rgba(167,139,250,0.85)"/>
+          <text x="537" y="325" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="7.5" font-family="sans-serif">Coast</text>
+
+          <!-- Status bar -->
+          <rect y="340" width="580" height="40" fill="#0d2233"/>
+          <circle cx="22" cy="360" r="3.5" fill="#4ade80"/>
+          <text x="33" y="364" fill="rgba(255,255,255,0.28)" font-size="8.5" font-family="sans-serif">Live · 5 sources · Updated today</text>
+          <rect x="392" y="357" width="148" height="3" rx="2" fill="rgba(255,255,255,0.06)"/>
+          <rect x="392" y="357" width="104" height="3" rx="2" fill="rgba(217,93,30,0.55)"/>
+        </g>
+
+        <!-- Panel border overlay -->
+        <rect width="580" height="380" rx="14" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      </svg>
     </div>
   </div>
 </section>
 
-<section class="services-list-section">
-  <h2>Four issues I help tackle</h2>
+<div class="hero-wave">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path class="wave-fill" d="M0,28 C240,70 480,0 720,42 C960,84 1200,18 1440,48 L1440,70 L0,70 Z"/>
+  </svg>
+</div>
 
-  <div class="service-row">
+<section class="services-list-section">
+  <h2>Four problems we solve</h2>
+
+  <div class="service-row reveal">
     <div class="service-row-title">
       <span class="service-number">01</span>
       <h3>"We don't have the right systems to work with our data."</h3>
     </div>
     <div class="service-row-body">
-      <p>You collect data but lack the infrastructure — the pipelines, platforms, or internal processes — to make it usable. I audit what you have, design what you need (scaled to your team's capacity and budget), and build or oversee the technical delivery. The system I leave behind is one you can actually maintain.</p>
+      <p>You collect data but lack the infrastructure - the pipelines, platforms, or internal processes - to make it usable. We audit what you have, design what you need (scaled to your team's capacity and budget), and build or oversee the technical delivery. The system we leave behind is one you can actually maintain.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">Data systems & dashboards →</a>
     </div>
   </div>
 
-  <div class="service-row">
+  <div class="service-row reveal reveal-delay-1">
     <div class="service-row-title">
       <span class="service-number">02</span>
       <h3>"We have data but it's not driving our decisions."</h3>
     </div>
     <div class="service-row-body">
-      <p>The infrastructure exists but the data isn't reaching decision-makers or shaping strategy. I build the decision-support tools — dashboards, metrics frameworks, reporting structures — that put the right information in front of the right people.</p>
+      <p>The infrastructure exists but the data isn't reaching decision-makers or shaping strategy. We build the decision-support tools - dashboards, metrics frameworks, reporting structures - that put the right information in front of the right people.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">MEL framework design →</a>
     </div>
   </div>
 
-  <div class="service-row">
+  <div class="service-row reveal reveal-delay-2">
     <div class="service-row-title">
       <span class="service-number">03</span>
       <h3>"We can't demonstrate our impact."</h3>
     </div>
     <div class="service-row-body">
-      <p>You're doing valuable work but can't quite communicate it — to funders, to government, or to your own board. I design impact frameworks, build clear reporting and visualisation, and help you tell the story of your work in a way that is compelling and grounded in evidence.</p>
+      <p>You're doing valuable work but can't communicate it - to funders, to government, or to your own board. We design impact frameworks, build clear reporting and visualisation, and help you tell the story of your work in a way that is compelling and grounded in evidence.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">Narrative clarity →</a>
     </div>
   </div>
 
-  <div class="service-row">
+  <div class="service-row reveal reveal-delay-3">
     <div class="service-row-title">
       <span class="service-number">04</span>
       <h3>"Our programme should be bigger than it is."</h3>
     </div>
     <div class="service-row-body">
-      <p>You have a strong environmental programme but it's stuck — not reaching enough users, not engaging the right stakeholders, or remaining voluntary when it should be embedded in regulation. I handle the strategic layer: stakeholder mapping, partnership development, and the advocacy needed to scale.</p>
+      <p>You have a strong environmental programme but it's stuck - not reaching enough users, not engaging the right stakeholders, or remaining voluntary when it should be embedded in regulation. We handle the strategic layer: stakeholder mapping, partnership development, and the advocacy needed to scale.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">Programme strategy →</a>
     </div>
   </div>
 </section>
 
-<section class="not-typical-section">
-  <div class="not-typical-inner">
-    <h2>Not a typical consultancy.</h2>
-    <p>I'm one person who can do the full spectrum — code a decision dashboard in the morning, present the strategy to your board in the afternoon. Seven years across UK government (DEFRA), international conservation NGOs, and corporate sustainability means I understand how these organisations actually work, not just how they should work in theory.</p>
-    <p>You get senior-level expertise, and I deliver implementation, not just recommendations.</p>
-    <a href="{{ '/about' | relative_url }}" class="cta-link">About me →</a>
-  </div>
+<section class="not-typical-section reveal">
+  <h2>More than just a report.</h2>
+  <p>Most data consultancies will build you a dashboard. Most strategy consultancies will hand you a report. We do both - and we understand the environmental context well enough to know which data matters, who needs to see it, and how to make it drive a decision.</p>
+  <p>Weird Fishes Advisory combines senior-level strategic expertise with hands-on technical implementation. One point of contact who can code a decision dashboard in the morning and present the strategy to your board in the afternoon. No layers, no handoffs, no recommendations without delivery.</p>
+  <a href="{{ '/about' | relative_url }}" class="cta-link">About Alex →</a>
 </section>
 
-<section class="clients-section">
+<section class="clients-section reveal">
   <h2>Clients</h2>
   <div class="client-logos">
     <a href="https://ocean.org/whales/wras/the-ocean-wise-whale-report-app/" target="_blank" rel="noopener noreferrer">
@@ -75,8 +212,8 @@ title: Home
   </div>
 </section>
 
-<section class="cta-section">
+<section class="cta-section reveal">
   <h2>Do you want to create more impact for nature?</h2>
-  <p>Whether it's driving decisions, demonstrating impact to funders, or scaling a programme's reach — let's figure out what's stuck and work to fix it.</p>
-  <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener" class="cta-button">Book a coffee with me</a>
+  <p>Whether it's driving decisions, demonstrating impact to funders, or scaling a programme's reach - let's figure out what's stuck and work to fix it.</p>
+  <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener" class="cta-button">Book a coffee with us</a>
 </section>
