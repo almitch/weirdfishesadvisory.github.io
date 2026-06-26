@@ -55,6 +55,17 @@
   --shadow-lg:  0 12px 32px rgba(0,0,0,0.4), 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* ===== VIEW TRANSITIONS (cross-document) =====
+   Smoothly cross-fades page-to-page navigation in supporting browsers.
+   Progressive enhancement: a no-op where unsupported. */
+@view-transition { navigation: auto; }
+
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 0.32s; }
+
+/* The sticky header stays put across navigations instead of fading */
+.site-header { view-transition-name: site-header; }
+
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -358,12 +369,16 @@ main { min-height: 100vh; }
 .hero-visual { position: relative; }
 
 .hero-dashboard {
+  --parallax: 0px;
   width: 100%;
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-xl), 0 0 0 1px rgba(255,255,255,0.06);
   transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+  /* Parallax drift uses the independent `translate` property so it never
+     fights the `transform` hover transition below. Driven by main.js. */
+  translate: 0 var(--parallax);
   transition: transform 0.7s var(--ease);
-  will-change: transform;
+  will-change: transform, translate;
 }
 
 .site-hero:hover .hero-dashboard {
@@ -804,53 +819,114 @@ main { min-height: 100vh; }
   margin: 0;
 }
 
-/* ===== ABOUT PAGE ===== */
-.about-hero {
-  background: var(--navy);
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 5rem var(--pad-x) 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-hero::before {
-  content: '';
-  position: absolute;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,93,30,0.1) 0%, transparent 70%);
-  top: -100px; right: 5%;
-  pointer-events: none;
-}
-
-.about-hero-inner {
+/* ===== TEAM PAGE ===== */
+.team-section {
   max-width: var(--max-w);
   margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) 0 1rem;
+}
+
+/* Columns: one per member, auto-fitting so 1, 2, 3+ all sit nicely */
+.team-grid {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 3rem;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  justify-content: center;
 }
 
-.about-hero-photo img {
-  width: 12vw;
-  height: auto;
-  aspect-ratio: 160 / 210;
-  object-fit: cover;
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  border: 2px solid rgba(255,255,255,0.12);
-  box-shadow: var(--shadow-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
 }
 
-.about-hero-content h1 {
-  color: white;
-  letter-spacing: -0.025em;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 0.75rem;
+.team-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
 }
+
+/* Orange top-border reveal on hover, matching the service cards */
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease);
+}
+.team-card:hover::before { transform: scaleX(1); }
+
+.team-card-photo {
+  width: 150px;
+  aspect-ratio: 160 / 210;
+  margin-bottom: 1.5rem;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+.team-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.team-card:hover .team-card-photo img { transform: scale(1.04); }
+
+.team-card-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.team-card-role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.team-card-bio {
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.team-card-linkedin {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 0.55rem 1.25rem;
+  transition: color 0.2s var(--ease-std), border-color 0.2s var(--ease-std), background 0.2s var(--ease-std);
+}
+.team-card-linkedin:hover {
+  color: white;
+  background: #0a66c2;
+  border-color: #0a66c2;
+  opacity: 1;
+}
+.team-card-linkedin i { font-size: 0.95rem; }
 
 /* ===== OFFSET SECTIONS ===== */
 .offset-section {
@@ -920,22 +996,6 @@ main { min-height: 100vh; }
   line-height: 1.6;
   color: rgba(242,245,240,0.62);
 }
-
-/* About CTA block */
-.about-cta {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text-muted);
-}
-.about-cta a {
-  color: var(--accent);
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 1px;
-}
-.about-cta a:hover { opacity: 0.75; }
 
 /* ===== CONTACT PAGE ===== */
 .contact-info {
@@ -1024,15 +1084,6 @@ main { min-height: 100vh; }
   .stats-inner { grid-template-columns: 1fr; gap: 2rem; }
   .work-model-grid { grid-template-columns: 1fr; gap: 2rem; }
 
-  .about-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .about-hero-photo img {
-    width: 28vw;
-  }
-
   .services-hero  { padding: 4rem var(--pad-x) 3rem; }
   .how-we-work-section { padding: 3rem var(--pad-x); }
   .stats-section  { padding: 3rem var(--pad-x); }
@@ -1046,3 +1097,27 @@ main { min-height: 100vh; }
 }
 
 /* --max-w is 90% across all breakpoints; no fixed-width override needed */
+
+/* ===== REDUCED MOTION =====
+   Honour the OS "reduce motion" setting: show all content immediately and
+   strip non-essential animation (reveals, parallax, view transitions). */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

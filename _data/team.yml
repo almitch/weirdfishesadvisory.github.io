@@ -1,0 +1,13 @@
+# Team members. Add a new entry here to add a column to the Team page -
+# no HTML required. `bio` supports a short paragraph; keep it concise.
+- name: Alex Mitchell
+  role: Founder & Director
+  photo: /assets/web/alex-mitchell.jpg
+  linkedin: https://www.linkedin.com/in/a-t-mitchell/
+  bio: >
+    Eight years at the intersection of environmental data, policy, and strategy -
+    across UK government (DEFRA), international conservation NGOs (Ocean Wise),
+    and field programmes on three continents. Alex builds the systems and
+    frameworks that turn nature data into decisions, defensible impact, and
+    policy that scales - coding a dashboard in the morning and presenting
+    strategy to a board in the afternoon.
