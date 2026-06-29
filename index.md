@@ -8,7 +8,7 @@ title: Home
     <div class="hero-text">
       <span class="hero-eyebrow">Environmental Advisory</span>
       <h1>Turning nature data into <em>impact</em> for nature.</h1>
-      <p class="hero-sub">We help environmental organisations - NGOs, government programmes, conservation startups - use their data to drive decisions, demonstrate impact, and scale what works.</p>
+      <p class="hero-sub">Wherever you are with your data, we help you turn it into impact for nature. We work across nature or climate, terrestrial or marine.</p>
       <div class="hero-ctas">
         <a href="{{ '/services' | relative_url }}" class="cta-button">Our services</a>
         <a href="{{ '/contact' | relative_url }}" class="cta-link">Get in touch →</a>
@@ -149,57 +149,49 @@ title: Home
 </div>
 
 <section class="services-list-section">
-  <h2>Four problems we solve</h2>
+  <h2>From data to impact</h2>
+  <p class="section-intro">Good environmental work follows a path - collect the right data, make sense of it, understand it, articulate it, and leverage it for positive change. But along this path there are many potholes. We help clients navigate it, for better impacts for nature and the environment.</p>
 
   <div class="service-row reveal">
     <div class="service-row-title">
       <span class="service-number">01</span>
-      <h3>"We don't have the right systems to work with our data."</h3>
+      <span class="service-stage">Measure</span>
+      <h3>"We're not capturing what we'd need to prove this works."</h3>
     </div>
     <div class="service-row-body">
-      <p>You collect data but lack the infrastructure - the pipelines, platforms, or internal processes - to make it usable. We audit what you have, design what you need (scaled to your team's capacity and budget), and build or oversee the technical delivery. The system we leave behind is one you can actually maintain.</p>
-      <a href="{{ '/services' | relative_url }}" class="cta-link">Data systems & dashboards →</a>
+      <p>We work out what you need to measure, how to measure it, and design the systems to collect it.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">Measurement design →</a>
     </div>
   </div>
 
   <div class="service-row reveal reveal-delay-1">
     <div class="service-row-title">
       <span class="service-number">02</span>
-      <h3>"We have data but it's not driving our decisions."</h3>
+      <span class="service-stage">Use</span>
+      <h3>"We've got data, but it's not helping drive decisions."</h3>
     </div>
     <div class="service-row-body">
-      <p>The infrastructure exists but the data isn't reaching decision-makers or shaping strategy. We build the decision-support tools - dashboards, metrics frameworks, reporting structures - that put the right information in front of the right people.</p>
-      <a href="{{ '/services' | relative_url }}" class="cta-link">MEL framework design →</a>
+      <p>We help you make sense of what you've got, tell its story to your team, funders or boards, and then build the tools that get it in front of the people making the call. We tailor this to needs and budget, to deliver something which lasts.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">Putting data to use →</a>
     </div>
   </div>
 
   <div class="service-row reveal reveal-delay-2">
     <div class="service-row-title">
       <span class="service-number">03</span>
-      <h3>"We can't demonstrate our impact."</h3>
+      <span class="service-stage">Scale</span>
+      <h3>"Our programme works, but it's stuck."</h3>
     </div>
     <div class="service-row-body">
-      <p>You're doing valuable work but can't communicate it - to funders, to government, or to your own board. We design impact frameworks, build clear reporting and visualisation, and help you tell the story of your work in a way that is compelling and grounded in evidence.</p>
-      <a href="{{ '/services' | relative_url }}" class="cta-link">Narrative clarity →</a>
-    </div>
-  </div>
-
-  <div class="service-row reveal reveal-delay-3">
-    <div class="service-row-title">
-      <span class="service-number">04</span>
-      <h3>"Our programme should be bigger than it is."</h3>
-    </div>
-    <div class="service-row-body">
-      <p>You have a strong environmental programme but it's stuck - not reaching enough users, not engaging the right stakeholders, or remaining voluntary when it should be embedded in regulation. We handle the strategic layer: stakeholder mapping, partnership development, and the advocacy needed to scale.</p>
-      <a href="{{ '/services' | relative_url }}" class="cta-link">Programme strategy →</a>
+      <p>With a background in environmental science, we work with you to design a strategy to meet your goals. We structure a theory of change you can use, build evidence to grow an idea, and assess the landscape to see where the gaps are. We help you along the path towards impact for nature.</p>
+      <a href="{{ '/services' | relative_url }}" class="cta-link">Strategy &amp; scaling →</a>
     </div>
   </div>
 </section>
 
 <section class="not-typical-section reveal">
   <h2>More than just a report.</h2>
-  <p>Most data consultancies will build you a dashboard. Most strategy consultancies will hand you a report. We do both - and we understand the environmental context well enough to know which data matters, who needs to see it, and how to make it drive a decision.</p>
-  <p>Weird Fishes Advisory combines senior-level strategic expertise with hands-on technical implementation. One point of contact who can code a decision dashboard in the morning and present the strategy to your board in the afternoon. No layers, no handoffs, no recommendations without delivery.</p>
+  <p>Most data consultancies build you a dashboard. Most strategy consultancies hand you a report. We can do both. Grounding all of our work in science, we take a collaborative approach to building tools and strategies that work for you.</p>
   <a href="{{ '/team' | relative_url }}" class="cta-link">Meet the team →</a>
 </section>
 
@@ -214,6 +206,6 @@ title: Home
 
 <section class="cta-section reveal">
   <h2>Do you want to create more impact for nature?</h2>
-  <p>Whether it's driving decisions, demonstrating impact to funders, or scaling a programme's reach - let's figure out what's stuck and work to fix it.</p>
+  <p>Whether it's driving decisions, tools to help programme management, proving impact to funders, or figuring out a strategy, let's work out what's stuck and fix it.</p>
   <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener" class="cta-button">Book a coffee with us</a>
 </section>

@@ -454,6 +454,14 @@ main { min-height: 100vh; }
   border-bottom: 1px solid var(--border);
 }
 
+.section-intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  max-width: 64ch;
+  margin: 1.75rem 0 0;
+}
+
 .service-row {
   display: grid;
   grid-template-columns: 28% 1fr;
@@ -474,12 +482,23 @@ main { min-height: 100vh; }
   text-transform: uppercase;
 }
 
-.service-row-title h3 {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  margin: 0 0 0.75rem;
-  color: var(--text);
+.service-stage {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 0.65rem;
+}
+
+.service-row-title h3 {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: italic;
 }
 
 .service-row-body p {
@@ -729,6 +748,7 @@ main { min-height: 100vh; }
   line-height: 1.25;
   margin: 0;
   letter-spacing: -0.01em;
+  min-height: 2.5em; /* keeps headlines level so the body starts at the same point */
 }
 
 .card-tagline {
@@ -743,12 +763,11 @@ main { min-height: 100vh; }
   font-size: 0.94rem;
   line-height: 1.8;
   color: var(--text-muted);
-  flex: 1;
+  min-height: 19rem; /* equalises body height so "What you receive" aligns across cards */
   margin: 0;
 }
 
 .card-deliverables {
-  margin-top: auto;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }

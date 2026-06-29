@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/sitemap.xml
+Sitemap: https://weirdfishes.fish/sitemap.xml
