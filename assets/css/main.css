@@ -568,6 +568,12 @@ main { min-height: 100vh; }
   transform: scale(1.06);
 }
 
+/* Wide wordmark logos: size by width so they don't blow out at a fixed height */
+.client-logo--wide {
+  height: auto;
+  width: 25vw;
+}
+
 /* ===== CTA SECTION ===== */
 .cta-section {
   max-width: var(--max-w);

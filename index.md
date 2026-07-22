@@ -201,6 +201,9 @@ title: Home
     <a href="https://ocean.org/whales/wras/the-ocean-wise-whale-report-app/" target="_blank" rel="noopener noreferrer">
       <img src="{{ '/assets/web/ocean-wise-logo.png' | relative_url }}" alt="Ocean Wise" class="client-logo" loading="lazy">
     </a>
+    <a href="https://howellmarine.co.uk/" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/web/hmc-logo.png' | relative_url }}" alt="HMC" class="client-logo client-logo--wide" loading="lazy">
+    </a>
   </div>
 </section>
 
