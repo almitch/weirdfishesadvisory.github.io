@@ -1,0 +1,17 @@
+{%- comment -%}
+Large swaying kelp stalks rising from the bottom edge of a section.
+Params: side (left|right|both, default both)
+{%- endcomment -%}
+{%- assign side = include.side | default: "both" -%}
+<div class="kelp-forest" aria-hidden="true">
+  {% if side == "left" or side == "both" %}
+  <div class="kf-group kf-left">
+    {% include icon.html name="kelp" class="kf kf-a" %}{% include icon.html name="kelp" class="kf kf-b" %}{% include icon.html name="kelp" class="kf kf-c" %}
+  </div>
+  {% endif %}
+  {% if side == "right" or side == "both" %}
+  <div class="kf-group kf-right">
+    {% include icon.html name="kelp" class="kf kf-d" %}{% include icon.html name="kelp" class="kf kf-e" %}{% include icon.html name="kelp" class="kf kf-f" %}{% include icon.html name="kelp" class="kf kf-g" %}
+  </div>
+  {% endif %}
+</div>

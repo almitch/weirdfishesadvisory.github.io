@@ -1,0 +1,11 @@
+{%- comment -%}
+Shared section header. Every section uses this so headers look the same.
+Params: title (required), subtitle, intro, level (h1|h2, default h2), center (true|false)
+{%- endcomment -%}
+{%- assign level = include.level | default: "h2" -%}
+<header class="section-head{% if include.center %} is-center{% endif %}" data-reveal>
+  <{{ level }} class="section-title">{{ include.title }}</{{ level }}>
+  {% if include.subtitle %}<p class="section-subtitle">{{ include.subtitle }}</p>{% endif %}
+  {% include fish-divider.html %}
+  {% if include.intro %}<p class="section-intro">{{ include.intro }}</p>{% endif %}
+</header>

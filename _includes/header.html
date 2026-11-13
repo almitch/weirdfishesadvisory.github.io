@@ -1,25 +1,14 @@
-<header class="site-header">
-  <div class="container">
-    <div class="header-content">
-      <div class="site-logo">
-        <a href="{{ '/' | relative_url }}">
-          <img src="{{ '/assets/web/logo-rect-light.svg' | relative_url }}" alt="{{ site.title }}" class="logo-light">
-          <img src="{{ '/assets/web/logo-rect-dark.svg' | relative_url }}" alt="{{ site.title }}" class="logo-dark">
-        </a>
-      </div>
-      
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
-        <a href="{{ '/services' | relative_url }}" {% if page.url == '/services/' %}class="active"{% endif %}>Services</a>
-        <a href="{{ '/team' | relative_url }}" {% if page.url == '/team/' %}class="active"{% endif %}>Team</a>
-        <a href="{{ '/contact' | relative_url }}" {% if page.url == '/contact/' %}class="active"{% endif %}>Contact</a>
-        
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-sun toggle-sun"></i>
-          <span class="toggle-thumb"></span>
-          <i class="fas fa-moon toggle-moon"></i>
-        </button>
-      </nav>
-    </div>
+<a class="skip-link" href="#problem">Skip to content</a>
+<header class="site-header theme-light" data-nav>
+  <div class="header-inner">
+    <a href="#top" class="site-logo" aria-label="{{ site.title }}, back to the surface">{% include logo.svg %}</a>
+
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#services" data-nav-link>Services</a>
+      <a href="#work" data-nav-link>Work</a>
+      <a href="#about" data-nav-link>About</a>
+      <a href="#contact" data-nav-link>Contact</a>
+      <a href="https://calendar.app.google/uGhyEnuhiTjoVJ7J6" target="_blank" rel="noopener" class="btn btn-sm">Book a coffee</a>
+    </nav>
   </div>
 </header>

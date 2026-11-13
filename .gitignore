@@ -1,1 +1,7 @@
 .Rhistory
+_site/
+.DS_Store
+.jekyll-cache/
+
+# Waba is "Personal Use Only" (Befonts). Keep out of the public repo until licensed.
+assets/fonts/

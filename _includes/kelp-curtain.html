@@ -1,0 +1,8 @@
+{%- comment -%}
+Giant foreground kelp that sits in front of the content and moves faster than
+the scroll, so you swim past it. Params: tone (light|dark)
+{%- endcomment -%}
+<div class="kelp-curtain kc-{{ include.tone | default: 'light' }}" aria-hidden="true">
+  <div class="kc-side kc-left" data-curtain data-speed="1.6">{% include icon.html name="kelp" class="kc kc-1" %}{% include icon.html name="kelp" class="kc kc-2" %}</div>
+  <div class="kc-side kc-right" data-curtain data-speed="2.1">{% include icon.html name="kelp" class="kc kc-3" %}{% include icon.html name="kelp" class="kc kc-4" %}</div>
+</div>

@@ -1,2 +1,2 @@
 # weirdfishesadvisory.github.io
-Public repo for my public website. Built with the help of Claude, written in Obsidian and converted to web by Jekyll. 
+Public repo for my public website. Single-page Jekyll site on GitHub Pages. The page is a dive from the surface to the abyss. Content lives in `_data/work.yml`, `_data/services.yml` and `_includes/sections/`; motion is GSAP + ScrollTrigger from cdnjs. The Waba display font is self-hosted from `assets/fonts/` (gitignored until licensed); a filled copy of Waba Kontor is used locally, and without it the site falls back to Big Shoulders Display. Built with the help of Claude. 

@@ -1,0 +1,50 @@
+<section class="services" id="services" data-zone="sunlit">
+  <div class="bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container" data-reveal-group>
+    {% include section-head.html title="What I do" subtitle="Good environmental work follows a path." intro="Collect the right data, make sense of it, articulate it, and use it for change. Along that path there are plenty of potholes. I help organisations get through them, wherever they're starting from." %}
+
+    <div class="service-list">
+      {% for s in site.data.services %}
+      <article class="service" data-reveal>
+        <button class="service-toggle" aria-expanded="false" aria-controls="service-{{ s.number }}" id="service-toggle-{{ s.number }}">
+          <span class="service-text">
+            <span class="service-stage">{{ s.stage }}</span>
+            <span class="service-quote">&ldquo;{{ s.quote }}&rdquo;</span>
+          </span>
+          <span class="service-more" aria-hidden="true"><span class="sm-open">More</span><span class="sm-close">Close</span><svg class="sm-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="service-panel" id="service-{{ s.number }}" role="region" aria-labelledby="service-toggle-{{ s.number }}" hidden>
+          <div class="service-panel-inner">
+            <div class="service-body">
+              <h3>{{ s.question }}</h3>
+              <p>{{ s.body }}</p>
+            </div>
+            <div class="card service-deliverables">
+              <h4>What you receive</h4>
+              <ul class="fish-list">
+                {% for d in s.deliverables %}<li>{% include icon.html name="fish" class="bullet" %}<span>{{ d }}</span></li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="how-i-work">
+      <div class="card how-card" data-reveal>
+        <h3>Project engagements</h3>
+        <p>Typically 4 to 10 weeks. A defined scope, a specific deliverable, a clear end point. Most measurement design, analysis and build work sits here. I scope the first phase precisely and define later phases once it's done.</p>
+      </div>
+      <div class="card how-card" data-reveal>
+        <h3>Strategic partnerships</h3>
+        <p>6 to 12 month arrangements for organisations that need ongoing data strategy, monitoring oversight or programme development. Structured as a retainer with a defined monthly scope.</p>
+      </div>
+      <div class="card how-card" data-reveal>
+        <h3>Who I work with</h3>
+        <p>NGOs, government agencies, environmental startups and corporate sustainability teams, across marine, freshwater, terrestrial and biodiversity work. I bring in specialist partners where specific domain expertise is needed.</p>
+      </div>
+    </div>
+  </div>
+  {% include kelp-forest.html %}
+</section>

@@ -2,15 +2,19 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    {% include icons/sprite.html %}
     {% include header.html %}
+    {% include depth-gauge.html %}
+    <canvas class="marine-snow" data-snow aria-hidden="true"></canvas>
 
-    <main class="container">
+    <main id="top">
       {{ content }}
     </main>
 
     {% include footer.html %}
 
-    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
 </html>

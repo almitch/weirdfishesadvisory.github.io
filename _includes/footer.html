@@ -1,8 +1,10 @@
-<div class="footer-banner">
-  <img src="{{ '/assets/web/hero-banner.svg' | relative_url }}" alt="Weird Fishes Advisory" loading="lazy">
-</div>
-<footer class="site-footer">
-  <div class="container">
-    <p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved. Designed, and built, by me.</p>
+<footer class="site-footer" data-zone="abyss">
+  <div class="seabed">
+    {% include seabed-banner.svg %}
+    {% include deep-fish.html %}
+  </div>
+  <div class="footer-bar">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} | Designed, and built, by me.</p>
+    <a href="#intro" class="footer-top">Back to the surface</a>
   </div>
 </footer>

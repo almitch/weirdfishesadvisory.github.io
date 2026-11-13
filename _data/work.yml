@@ -1,0 +1,147 @@
+# Case studies shown in the Work section, in display order.
+# `year` only for retainers. `stats` are short chips; `detail` fills the "How it was done" overlay.
+- id: fwl-pipeline
+  client: Freshwater Life
+  logo: /assets/web/FRESHWATER_LIFE.png
+  title: Global prioritisation pipeline for invasive fish eradication
+  summary: >-
+    A reproducible R pipeline that turns global species, invader and hydrography
+    data into a tiered shortlist of eradication sites, which funders can re-weight
+    live to match their priorities.
+  stats:
+    - label: Starting point
+      value: IUCN Red List + global hydrography
+    - label: Output
+      value: Tiered, costed shortlists per region
+    - label: For funders
+      value: Live re-weighting tool
+  detail:
+    situation: >-
+      Invasive fish are one of the leading threats to freshwater species.
+      Eradication works and has been done successfully many times, but
+      conservation organisations have lacked a clear, evidence-based view of
+      where it would do the most good next.
+    task: >-
+      Freshwater Life asked me to build a global prioritisation pipeline: identify
+      the waterbodies where removing invasive fish would best protect threatened
+      species, estimate what it would take, and support targeted funding bids.
+    action: >-
+      I built a reproducible R pipeline. It starts from IUCN Red List species
+      threatened by invasive fish and overlays their ranges with invader
+      distributions and global hydrography data to find candidate lakes, rivers
+      and ponds. Each site is screened for feasibility (size, isolation,
+      reinvasion risk, competing threats) and scored for conservation benefit
+      (extinction risk, evolutionary distinctiveness, irreplaceability, social
+      value). Regional experts then add local knowledge of partners, permitting
+      and site conditions.
+    result: >-
+      A tiered shortlist of near-term and longer-term opportunities in each
+      region, with indicative costs. An interactive tool lets funders re-weight
+      priorities live, so projects can be matched to each funder's interests.
+
+- id: fwise
+  client: Freshwater Life
+  logo: /assets/web/FRESHWATER_LIFE.png
+  title: "FWISE: the open evidence base on freshwater eradications"
+  summary: >-
+    The first open evidence base on freshwater invasive species eradication,
+    covering around 1,000 attempts across 37 countries, built to show what's
+    worked, where, and where it hasn't been tried.
+  link:
+    url: https://fwise.org
+    label: Explore fwise.org
+  stats:
+    - label: Eradication attempts
+      value: "1,000"
+      count: 1000
+      prefix: "~"
+    - label: Countries
+      value: "37"
+      count: 37
+    - label: Launch audience
+      value: "200"
+      count: 200
+      prefix: "~"
+  detail:
+    situation: >-
+      Freshwater Life had built FWISE, a new evidence base of around 1,000
+      freshwater invasive species eradication attempts. They had no public way
+      for partners, funders or researchers to explore it, and a global launch
+      was a few weeks away.
+    task: >-
+      I was the sole designer and developer, contracted to build a public,
+      open-access web app in time for the October 2026 launch webinars.
+    action: >-
+      I ran a discovery workshop with the team to pin down who the tool was for
+      and which questions it had to answer. I then built an R Shiny app with an
+      interactive map, filters, a guided report builder and one-click
+      multi-sheet exports that keep caveats and filter records attached to the
+      data. I added an in-app submission form that sends new records to a review
+      queue, and themed the app to the Freshwater Life brand with a
+      colourblind-safe palette. It's hosted on Posit Connect Cloud.
+    result: >-
+      The app launched to around 200 conservation practitioners and funders. It
+      gives them one place to see where eradication has worked, how it was done,
+      and where it hasn't been tried yet. Freshwater Life then extended the work
+      into a follow-on contract.
+
+- id: wras
+  client: Ocean Wise
+  logo: /assets/web/ocean-wise-logo.png
+  year: "2025 - 2026"
+  title: Whale Report Alert System
+  summary: >-
+    Real-time whale detections from public sightings, hydrophones and thermal
+    cameras, delivered into ship navigation to reduce ship strikes across North
+    America.
+  link:
+    url: https://ocean.org/whales/wras/the-ocean-wise-whale-report-app/
+    label: About WRAS
+  stats:
+    - label: Data reaching mariners
+      value: "200"
+      count: 200
+      prefix: "+"
+      suffix: "%"
+    - label: Coverage
+      value: Pacific Northwest to continental North America
+    - label: Reporting time saved
+      value: "~0.25 FTE a year"
+  detail:
+    situation: >-
+      Ship strikes are a leading cause of death for large whales. The Whale
+      Report Alert System sends real-time whale alerts to mariners so they can
+      slow down or reroute, but its data, platform and partnerships needed to
+      scale beyond British Columbia.
+    task: >-
+      As strategic and technical lead, first as programme manager and now on
+      retainer, I was responsible for requirements, testing and launch of the
+      mobile and web apps, the data pipeline, grant funding and partner
+      relationships on both sides of the US-Canada border.
+    action: >-
+      With the IT Director I rebuilt the data pipeline into a single source of
+      truth and led development of API v2, so hydrophone and thermal camera
+      detections flow alongside public sightings. I redrafted the data
+      governance and commercial licensing framework, built R Shiny and Python
+      dashboards for partners and internal teams, and led innovation projects
+      that put whale presence into the navigation software pilots already use.
+      I led grant applications and reporting, including a major NFWF Vessel
+      Strike Avoidance Fund bid.
+    result: >-
+      Six reciprocal data partnerships increased the data available to mariners
+      by around 200% and extended coverage to continental North America. The
+      internal reporting dashboard saves about a quarter of an FTE each year.
+      Whale presence is now becoming part of navigation safety, not just an app.
+
+- id: hmc
+  client: Howell Marine Consulting
+  logo: /assets/web/hmc-logo.png
+  logo_wide: true
+  year: "2026 - present"
+  title: Associate, marine strategy and data
+  summary: >-
+    Selected to the HMC associate pool to deliver marine strategy and data work
+    within larger consultant-led programmes.
+  link:
+    url: https://howellmarine.co.uk/
+    label: howellmarine.co.uk

@@ -1,0 +1,2 @@
+{%- comment -%}A huge fish shadow gliding behind the content. Params: top (css), flip (true swims left){%- endcomment -%}
+<div class="creature{% if include.flip %} is-flipped{% endif %}" style="top: {{ include.top | default: '20%' }}" aria-hidden="true" data-creature>{% include icon.html name="fish" %}</div>

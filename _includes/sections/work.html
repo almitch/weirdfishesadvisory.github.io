@@ -1,0 +1,67 @@
+<section class="work" id="work" data-zone="twilight">
+  {% include kelp-curtain.html tone="dark" %}
+  {% include creature.html top="38%" %}
+  <div class="fish-school" aria-hidden="true">
+    {% for i in (1..7) %}<span class="school-fish sch-{{ i }}">{% include icon.html name="fish" %}</span>{% endfor %}
+  </div>
+
+  <div class="container" data-reveal-group>
+    {% include section-head.html title="The work" subtitle="Tools that decide where effort goes." %}
+
+    <div class="work-list">
+      {% for w in site.data.work %}
+      <article class="card work-card" data-reveal>
+        <div class="work-logo{% if w.logo_wide %} work-logo-wide{% endif %}">
+          <img src="{{ w.logo | relative_url }}" alt="{{ w.client }}">
+        </div>
+
+        <div class="work-main">
+          <p class="work-meta">{{ w.client }}{% if w.year %} | {{ w.year }}{% endif %}</p>
+          <h3 class="work-title">{{ w.title }}</h3>
+          <p class="work-summary">{{ w.summary }}</p>
+          <div class="work-actions">
+            {% if w.detail %}
+            <button class="btn btn-sm work-more" data-dialog-open="dialog-{{ w.id }}" aria-haspopup="dialog">How it was done</button>
+            {% endif %}
+            {% if w.link %}
+            <a href="{{ w.link.url }}" target="_blank" rel="noopener" class="link-arrow">{{ w.link.label }}</a>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if w.stats %}
+        <ul class="work-stats">
+          {% for st in w.stats %}
+          <li>
+            <span class="stat-value">{% if st.count %}{{ st.prefix }}<span class="count" data-to="{{ st.count }}">{{ st.value }}</span>{{ st.suffix }}{% else %}{{ st.value }}{% endif %}</span>
+            <span class="stat-label">{{ st.label }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% include kelp-forest.html side="left" %}
+
+  {% for w in site.data.work %}{% if w.detail %}
+  <dialog class="work-dialog" id="dialog-{{ w.id }}" aria-labelledby="dialog-{{ w.id }}-title" data-zone="midnight">
+    <div class="wd-inner">
+      <button class="wd-close" data-dialog-close aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <p class="work-meta">{{ w.client }}{% if w.year %} | {{ w.year }}{% endif %}</p>
+      <h3 class="wd-title" id="dialog-{{ w.id }}-title">{{ w.title }}</h3>
+      {% include fish-divider.html %}
+      <dl class="wd-star">
+        <div><dt>Situation</dt><dd>{{ w.detail.situation }}</dd></div>
+        <div><dt>Task</dt><dd>{{ w.detail.task }}</dd></div>
+        <div><dt>Action</dt><dd>{{ w.detail.action }}</dd></div>
+        <div><dt>Result</dt><dd>{{ w.detail.result }}</dd></div>
+      </dl>
+      {% if w.link %}<a href="{{ w.link.url }}" target="_blank" rel="noopener" class="link-arrow">{{ w.link.label }}</a>{% endif %}
+    </div>
+  </dialog>
+  {% endif %}{% endfor %}
+</section>
