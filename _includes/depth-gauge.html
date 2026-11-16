@@ -1,12 +1,14 @@
 <nav class="depth-gauge" aria-label="Page sections" data-gauge>
-  <div class="dg-track"><span class="dg-fill" data-gauge-fill></span></div>
-  <span class="dg-marker" data-gauge-marker>{% include icon.html name="fish" %}</span>
+  {%- comment -%}Squiggly depth line: a faint track, with an orange copy revealed down to the scroll position.{%- endcomment -%}
+  <div class="dg-track">
+    <svg class="dg-wave dg-wave-track" viewBox="0 0 20 100" preserveAspectRatio="none" aria-hidden="true"><path d="M10 0 Q22 3.125 10 6.25 T10 12.5 T10 18.75 T10 25 T10 31.25 T10 37.5 T10 43.75 T10 50 T10 56.25 T10 62.5 T10 68.75 T10 75 T10 81.25 T10 87.5 T10 93.75 T10 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+    <span class="dg-fill" data-gauge-fill><svg class="dg-wave dg-wave-fill" viewBox="0 0 20 100" preserveAspectRatio="none" aria-hidden="true"><path d="M10 0 Q22 3.125 10 6.25 T10 12.5 T10 18.75 T10 25 T10 31.25 T10 37.5 T10 43.75 T10 50 T10 56.25 T10 62.5 T10 68.75 T10 75 T10 81.25 T10 87.5 T10 93.75 T10 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>
+  </div>
+  <span class="dg-marker" data-gauge-marker>{% include icon.html name="fish-solid" %}</span>
   <ol class="dg-zones">
     <li data-gauge-target="#intro"><a href="#intro">Intro</a></li>
-    <li data-gauge-target="#problem"><a href="#problem">The problem</a></li>
     <li data-gauge-target="#services"><a href="#services">What I do</a></li>
-    <li data-gauge-target="#work"><a href="#work">The work</a></li>
-    <li data-gauge-target="#clients"><a href="#clients">Clients</a></li>
+    <li data-gauge-target="#work"><a href="#work">My work</a></li>
     <li data-gauge-target="#about"><a href="#about">About</a></li>
     <li data-gauge-target="#contact"><a href="#contact">Contact</a></li>
   </ol>

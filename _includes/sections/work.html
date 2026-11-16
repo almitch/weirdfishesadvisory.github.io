@@ -6,15 +6,11 @@
   </div>
 
   <div class="container" data-reveal-group>
-    {% include section-head.html title="The work" subtitle="Tools that decide where effort goes." %}
+    {% include section-head.html title="My work" %}
 
     <div class="work-list">
       {% for w in site.data.work %}
       <article class="card work-card" data-reveal>
-        <div class="work-logo{% if w.logo_wide %} work-logo-wide{% endif %}">
-          <img src="{{ w.logo | relative_url }}" alt="{{ w.client }}">
-        </div>
-
         <div class="work-main">
           <p class="work-meta">{{ w.client }}{% if w.year %} | {{ w.year }}{% endif %}</p>
           <h3 class="work-title">{{ w.title }}</h3>
@@ -42,6 +38,23 @@
       </article>
       {% endfor %}
     </div>
+
+    <div class="how-i-work" data-reveal>
+      <div class="how-card">
+        <h3>Projects</h3>
+        <p>4 to 10 weeks, with a defined scope and a clear deliverable.</p>
+      </div>
+      <div class="how-card">
+        <h3>Partnerships</h3>
+        <p>6 to 12 month retainers for ongoing data strategy, monitoring or programme development.</p>
+      </div>
+      <div class="how-card">
+        <h3>Who I work with</h3>
+        <p>NGOs, government, environmental startups and corporate sustainability teams.</p>
+      </div>
+    </div>
+
+    {% include sections/clients.html %}
   </div>
   {% include kelp-forest.html side="left" %}
 

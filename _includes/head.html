@@ -11,21 +11,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
   {%- comment -%}
-  Waba (display font) is self-hosted from assets/fonts/ only when the file is present.
-  Its licence is "Personal Use Only", so the folder is gitignored until a licence is confirmed.
-  waba-filled.woff2 is the Kontor outline cut with its inner hollow contours removed so letters read solid.
-  Without it, Big Shoulders Display (free, condensed, solid) stands in.
+  Titles: Gloock, a high-contrast display serif (one weight, no italic).
+  Everything else: Epilogue (SIL OFL), a clean grotesque that pairs with it.
   {%- endcomment -%}
-  {%- assign waba = site.static_files | where: "path", "/assets/fonts/waba-filled.woff2" | first -%}
-  {% if waba %}
-  <link rel="preload" href="{{ '/assets/fonts/waba-filled.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <style>@font-face{font-family:'Waba';src:url('{{ "/assets/fonts/waba-filled.woff2" | relative_url }}') format('woff2');font-weight:400 900;font-display:swap;}</style>
-  {% else %}
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&display=swap" rel="stylesheet">
-  {% endif %}
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400..700;1,400..600&family=Gloock&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>

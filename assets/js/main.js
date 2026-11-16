@@ -101,7 +101,11 @@
       const seabed = document.querySelector('.seabed');
       if (seabed) gauge.classList.toggle('is-hidden', seabed.getBoundingClientRect().top < window.innerHeight * 0.75);
       if (gaugeFill) gaugeFill.style.height = `${progress * 100}%`;
-      if (gaugeMarker) gaugeMarker.style.top = `${progress * 100}%`;
+      if (gaugeMarker) {
+        gaugeMarker.style.top = `${progress * 100}%`;
+        // Follow the squiggle: 8 waves, 6px either side (matches the path in depth-gauge.html)
+        gaugeMarker.style.setProperty('--dx', `${(6 * Math.sin(progress * 16 * Math.PI)).toFixed(1)}px`);
+      }
       const probe = y + window.innerHeight * 0.35;
       let current = sectionStarts[0] && sectionStarts[0].li;
       sectionStarts.forEach(({ li, start }) => { if (probe >= start) current = li; });

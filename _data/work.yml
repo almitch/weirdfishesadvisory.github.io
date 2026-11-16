@@ -2,7 +2,6 @@
 # `year` only for retainers. `stats` are short chips; `detail` fills the "How it was done" overlay.
 - id: fwl-pipeline
   client: Freshwater Life
-  logo: /assets/web/FRESHWATER_LIFE.png
   title: Global prioritisation pipeline for invasive fish eradication
   summary: >-
     A reproducible R pipeline that turns global species, invader and hydrography
@@ -41,7 +40,6 @@
 
 - id: fwise
   client: Freshwater Life
-  logo: /assets/web/FRESHWATER_LIFE.png
   title: "FWISE: the open evidence base on freshwater eradications"
   summary: >-
     The first open evidence base on freshwater invasive species eradication,
@@ -87,7 +85,6 @@
 
 - id: wras
   client: Ocean Wise
-  logo: /assets/web/ocean-wise-logo.png
   year: "2025 - 2026"
   title: Whale Report Alert System
   summary: >-
@@ -131,17 +128,3 @@
       Six reciprocal data partnerships increased the data available to mariners
       by around 200% and extended coverage to continental North America. The
       internal reporting dashboard saves about a quarter of an FTE each year.
-      Whale presence is now becoming part of navigation safety, not just an app.
-
-- id: hmc
-  client: Howell Marine Consulting
-  logo: /assets/web/hmc-logo.png
-  logo_wide: true
-  year: "2026 - present"
-  title: Associate, marine strategy and data
-  summary: >-
-    Selected to the HMC associate pool to deliver marine strategy and data work
-    within larger consultant-led programmes.
-  link:
-    url: https://howellmarine.co.uk/
-    label: howellmarine.co.uk

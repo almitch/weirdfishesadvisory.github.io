@@ -4,58 +4,40 @@
   quote: "We're not capturing what we'd need to prove this works."
   question: New or existing, how do we measure and use data?
   body: >-
-    Programmes are often built without a process to capture whether they're
-    working. I start from the impact you're trying to prove and work backwards:
-    what would demonstrate it, what data generates that evidence, and how that
-    data should be collected, structured and stored. Working from user stories
-    and the real capacity of your team, I produce the measurement framework and
-    system design your developers can build against, so the right data is
-    captured from day one rather than reconstructed later.
+    Programmes often launch with no way to tell whether they're working. I start
+    from the impact you need to prove and work backwards to the data, how it's
+    collected and the system that holds it, so it's captured right from day one.
   deliverables:
     - "Impact-to-data map: what you need to prove, and the data that proves it"
-    - "Monitoring and evaluation framework: indicators per component, site or deployment"
-    - "Data collection design: what's captured, by whom, and through what process"
-    - "System architecture and requirements: user stories and a brief your developers can build from"
+    - "Monitoring and evaluation framework"
+    - "Data collection and system design your developers can build from"
 
 - number: "02"
   stage: Use
   quote: "We've got data, but it's not helping drive decisions."
   question: You've got data. How do you make sense of it and act on it?
   body: >-
-    Most organisations are sitting on data that could be doing more, whether
-    that's making their case to funders or driving day-to-day decisions. I work
-    out what your data is actually telling you, build the impact framework that
-    separates what you can evidence from what you can't yet, and turn it into
-    something a funder, board or government audience will trust. Where data
-    never reaches the people making decisions, I build the tools that fix it:
-    dashboards, reporting and decision-support systems sized to your team and
-    budget. Where a build is simple I do it directly (R, Python, Power BI,
-    Excel); where it's bigger I write the brief so you can bring in the right
-    partner. Either way you keep something your team can run without me.
+    Most organisations are sitting on data that could be doing more. I work out
+    what it's telling you, separate what you can evidence from what you can't
+    yet, and get it in front of the people making decisions. Smaller builds I do
+    myself in R, Python or Power BI; bigger ones I spec so you can bring in the
+    right partner.
   deliverables:
-    - "Impact framework: what you claim, what you can evidence, and how the gap closes"
-    - "Analysis and interpretation: what your data shows, in plain terms"
-    - "Funder- and board-ready reporting: narrative and visuals built for a specific audience"
-    - "Decision-support tools: dashboards and reporting built for how your organisation actually works"
-    - "Technical requirements brief and handover: a procurement-ready spec and documentation your team can maintain"
+    - "Impact framework: what you can evidence, and how to close the gap"
+    - "Funder- and board-ready reporting"
+    - "Dashboards and decision-support tools your team can run without me"
 
 - number: "03"
   stage: Scale
   quote: "Our programme works, but it's stuck."
   question: Where should this programme be in five years, and how does it get there?
   body: >-
-    Whether you're struggling to really make change or starting something new,
-    I can support development. Through facilitated workshops I surface the
-    assumptions your programme rests on and build a theory of change that makes
-    its logic explicit and testable. From there I develop the strategy: the
-    priorities, the growth pathway, and, where scaling is the goal, how you
-    align with the frameworks that govern your field (IMO, IPBES, CBD, IWC) and
-    build the evidence-based case to embed your work in policy. I'm doing
-    exactly this with WRAS, moving it from a voluntary app in British Columbia
-    toward regulated maritime navigation across continental North America.
+    Through facilitated workshops I build a theory of change that makes your
+    programme's logic explicit, then the strategy to grow it, including how to
+    align with the frameworks that govern your field and embed your work in
+    policy. I'm doing this now with WRAS, taking it from a voluntary app in
+    British Columbia toward regulated navigation across North America.
   deliverables:
-    - "Facilitated workshops: structured sessions that surface assumptions and build alignment"
-    - "Theory of change: how your activities lead to outcomes and impact, made explicit and testable"
-    - "Stakeholder and landscape analysis: who matters, where the leverage is, which frameworks govern your field"
-    - "Programme strategy: priorities and a growth pathway, with a clear rationale behind each decision"
-    - "Advocacy and scaling plan: the route from good idea to embedded policy"
+    - "Facilitated workshops and a testable theory of change"
+    - "Stakeholder and policy landscape: where the leverage is"
+    - "Programme strategy and a route from good idea to embedded policy"
